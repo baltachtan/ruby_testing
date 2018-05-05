@@ -16,7 +16,7 @@ class SiteElement < Test::Unit::TestCase
 
     wait.until {@driver.find_elements(:xpath => "//*[contains(text(), 'GitHub Marketplace')]")}
     text = @driver.find_elements(:xpath => "//*[contains(text(), 'GitHub Marketplace')]")
-    assert_equal(false,text[0].displayed?, "text is displayed")
+    assert_equal(true,text[0].displayed?, "text is displayed")
   end
 
   def teardown()
